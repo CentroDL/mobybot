@@ -60,7 +60,7 @@ module.exports = (robot) ->
 
   stringifyQueue = ->
     str = _.reduce studentQueue, (reply, stud) ->
-        "\n#{stud.name} at #{formatTime stud.queuedAt} for #{stud.reason}"
+        reply + "\n#{stud.name} at #{formatTime stud.queuedAt} for #{stud.reason}"
       , ""
     "Current queue is: #{str}"
 
